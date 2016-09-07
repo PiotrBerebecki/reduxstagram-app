@@ -17,12 +17,11 @@
         }]
       ]
     },
-    "productions": {
+    "production": {
       "plugins": [
         ["transform-object-rest-spread"],
-        ["transform-react-display-name"]      ]
-    }
-          
-    }
+        ["transform-react-display-name"]
+      ]
+    }        
   }
 }
