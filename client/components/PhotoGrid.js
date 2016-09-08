@@ -5,12 +5,11 @@ const PhotoGrid = React.createClass({
   render() {
     return (
       <div className="photo-grid">
-        {this.props.posts.map((post, index) => {
+        {this.props.posts.map((post, i) => {
             return <Photo {...this.props}
-                          key={index}
-                          index={index}
-                          post={post} />;
-          }
+                          key={i}
+                          i={i}
+                          post={post} />;}
         )}
       </div>
     );
