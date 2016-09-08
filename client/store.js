@@ -14,7 +14,11 @@ const defaultStore = {
   comments
 };
 
-const store = createStore(rootReducer, defaultStore);
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : (f) => f
+);
+
+const store = createStore(rootReducer, defaultStore, enhancers);
 
 // we export history because we need it in `reduxstagram.js` to feed into <Router>
 export const history = syncHistoryWithStore(browserHistory, store);
